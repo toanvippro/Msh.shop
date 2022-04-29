@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    
+
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+.img_header{
+    background-image: url(img/278293907_1096618524403521_8890356900997716352_n.jpg);
+    width: 100%;
+    height:520px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    top:-130px;
+}
+.name h6{
+    font-size: 20px;
+}
+.name2 h6{
+    margin-top: 20px;
+    margin-left: -40px;
+    font-size: 17px;
+}
+.nav_stack{
+    display: flex;
+    justify-content: space-around ;
+    line-height:70px ;
+}
+/* */
+.nav_stack li a {
+    color:#000;
+    text-decoration: none;
+} 
+.logo2{
+    margin-top: -90px;
+    margin-left: 50px;
+}
+.logo {    
+    position:absolute;
+    top: 0;
+}
+
+/* hiệu ứng khi di chuột vào item */
+.effect:before{
+    content: '';
+    position: absolute;
+    top:55px;
+    width: 4.3%;
+    height: 1px;
+    background: rgb(22, 21, 21);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+}
+.effect:hover:before
+{
+    transform-origin: left;
+    transform: scaleX(1);
+    
+
+}
+.effect:hover{
+    color: #5e5d5d;
+
+}
+.fix_nav:before{
+    content: '';
+    position: absolute;
+    top:55px;
+    width: 4%;
+    height: 1px;
+    background: rgb(22, 21, 21);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+}
+.fix_nav_2:before{
+    content: '';
+    position: absolute;
+    top:55px;
+    width: 5%;
+    height: 1px;
+    background: rgb(22, 21, 21);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+}
+.key    {
+    opacity: 0.6;
+    margin-bottom:20px;
+    margin-right: -0px;
+}
+.article1{
+    display:block;
+    text-align: center;
+    margin-top: -60px;
+}
+.image_TT {
+    border-radius:50%;
+    border: 3px solid rgb(156, 163, 13);
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    margin-bottom: 10px;
+
+}
+#fix_art{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.note_style{
+    height: 20px;
+}
+/* .note_style:before{
+    content: '';
+    position: absolute;
+    bottom: -155px;
+    width: 10%;
+    height: 1px;
+    background: rgb(22, 21, 21);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.6s;
+}
+.note_style:hover:before
+{
+    transform-origin: left;
+    transform: scaleX(1);
+    
+}
+*/
+.note_style:hover{
+    color: #5e5d5d;
+
+}
+/*
+.note_style.tab1:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-155px - 90px);
+    width: 9.2%;
+}
+.note_style.tab2:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-155px - 90px);
+    width: 5.5%;
+}
+.note_style.tab3:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-155px - 90px);
+    width: 15.3%;
+}
+.note_style.tab4:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-251px - 90px);
+    width: 10%;
+}
+.note_style.tab5:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-251px - 90px);
+    width: 4.5%;
+}
+.note_style.tab6:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-251px - 90px);
+    width: 11%;
+}
+.note_style.tab7:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-348px - 90px);
+    width: 7.4%;
+}
+.note_style.tab8:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-348px - 90px);
+    width: 4%;
+}
+.note_style.tab9:before{
+    content: '';
+    position: absolute;
+    bottom:  calc(-348px - 90px);
+    width: 10.7%;
+} */
+.image_art{
+    margin-top: 200px;
+    background-color: rgba(0, 0, 0,.9);
+    width: 100%;
+    height: 400px;
+}
+.but_header{
+    position:absolute;
+    left: 128px;
+    padding: 0 60px;
+    font-size: 29px;
+    bottom: 143px;
+    border: #fff;
+    background-color: #fff;
+}
+.img_tiger{
+    background-image: url(https://v.fastcdn.co/u/2d746943/40301116-0-Panther.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22%;
+    height: 100%;
+    position: absolute;
+    top:1370px;
+    left: 120px;
+}
+.art_h3 {
+    color: rgb(247, 247, 247);
+    font-size: 30px;
+    padding-top: 100px;
+    padding-left: 600px;
+    margin-bottom: 10px;
+
+
+    }
+.art_p {
+    color: rgb(255, 255, 255);
+    padding-left: 600px;
+
+    }
+.button_art{
+    margin-top: 40px;
+    margin-left: 39.5%;
+    padding: 6px 60px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color:  rgb(90, 91, 31); 
+}
+
+.button_art:hover{
+    background-color: rgb(31, 2, 2); ;
+    
+}
+footer{
+    position: relative;
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0,.9);
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+}
+.icon_footer {
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 680px) {
+    div.ma70{
+        /* display: none; */
+       padding-left: 70px; 
+       margin-top: -20px;
+       /* border-bottom: 1px solid bisque; */
+    }
+
+}
+
+/* <= table */
+@media (max-width: 1023px) {
+    .logo {
+        margin-left: 170px ;
+        margin-top: 10px;
+        width: 70px;
+        height: 70px; 
+
+    }
+    .logo2{
+        margin-left: 180px;
+        z-index: 110;
+        margin-top:-100px;
+        /* position: absolute; */
+    }
+
+
+    .img_tiger{
+        margin-top: 130px;
+    }
+    .art_h3,
+    .art_p,
+    .button_art{
+        margin-right: 50px;
+    }
+    .art_right{
+        margin-right: 300px;
+    }
+}
+@media (max-width: 680px) {
+    .logo2{
+        margin-left: 120px;
+    
+    }
+    .logo{
+        margin-left: 120px;
+    }
+    div.fade{
+        margin: 0 15px;
+    }
+    #fix_art{
+        display: flex;
+        justify-content: start;
+        text-align: center;
+        margin: 15px 120px;
+    }
+    #fix_art:last-child{
+        margin-left: 115px;
+    
+    }
+
+}
+
+
+/* ^^^^ trên đây là phần css của trang index.html  ^^^^*/
