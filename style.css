@@ -1,330 +1,511 @@
+
 *{
+    box-sizing: border-box; 
+    padding :0;
     margin: 0;
-    padding: 0;
     list-style: none;
-    box-sizing: border-box;
+    border: 0;   
+    text-decoration: none;
     font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+.image_pc{
+    background-image: url(img/header.jpg);
+    background-repeat: no-repeat;
+    width: 76%;
+    height: 735px;
+}
+.image_mobile {
+    width: 100%;
+    height: 104vh;
+    background-image: url(img/header.jpg);
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0505/9044/9849/files/Frame_136_1200x.png?v=1647514023); */
+    background-position: 0 0 0 0;
+    background-repeat: no-repeat;
+    display: none;
+    background-size:cover;
+}
+header nav{
+    
+    /* thanh ngang nav trong trang*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 100px ;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.144);
+    box-shadow: 0 1 ;
+    /* position: absolute; */
+    }
+.nav_bar .nav_bar2 {
+    display: none;
+}
+.nav_bar .nav_bar2 .ionicon{
+    
+    width: 34px;
+    height: 50px;
+    color: #000000;
+    position:fixed;
+    top:10px;
+    left: 30px;
+
+    /* display: none; */
+    
+}
+.nav_bar .nav_bar2 svg:hover{
+    color: #fff;
+}
+.brand h2 a{
+    /*logo trong nav của trang*/
+    float: left ;
+    height: 100%;
+    line-height: 68px; 
+    color: rgb(0, 0, 0);
+    text-indent: -60px;
+    font-size: 22px;
+    text-decoration: none;
+    
+}
+
+#brand_mobile h2 a{
+    /*logo trong nav của trang*/
+    float: left ;
+    position: absolute;
+    left: 55%;
+    line-height: 300%; 
+    color: rgb(0, 0, 0);
+    text-indent: -60px;
+    font-size: 22px;
+    text-decoration: none;
+    display: none;
+    
+}
+
+.menu ul li{
+    /* điều chỉnh khích thước vị trí của menu*/
+    font-size: 14px;
+    float: left;
+    display: flex;
+}
+
+.menu ul li a{
+    /* điều chỉnh khoảng cách, màu*/
+    position: relative;
+    display: block;
+    height: 80px;
+    line-height: 70px;
+    padding: 0 19px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    transition: 0.5s
+    /* height: 100px; */
+    
+}  
+.menu ul li a:before{
+    /* chỉnh hiệu ứng khi trỏ vào thẻ*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    background: rgb(95, 91, 91);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+}
+.menu ul li a:hover:before{
+    /*trước khi trỏ vào hiệu ứng*/
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.menu ul li a:hover{
+    /* sau khi trỏ*/
+    color: #fff9f9;
+}
+
+.slide ul li{
+    /* vị trí kích thước*/
+    font-size: 14px; 
+    display: flex;
+    height: 1px;
+    line-height: 40px;
+    /* display:table; */
+    float: right;
+    position: relative;
+    left: 45px;
     
 
 }
-html{
-    margin: 0;
-    padding: 0;
+.slide ul li a{
+    /* khoảng cách của 2 thẻ a*/
+    /* font-family: Arial, Helvetica, sans-serif; */
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+   
 }
-.img_header{
-    background-image: url(img/278293907_1096618524403521_8890356900997716352_n.jpg);
+
+.slide ul li a:before{
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 14px;
+    width: 67%;
+    height: 87%;
+    background: rgb(22, 21, 21);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+}
+
+.slide ul li a:hover:before{
+    transform-origin: left;
+    transform: scaleX(1);
+    
+
+}
+.slide ul li a:hover{
+    color: #000000;
+
+}
+.search{
+    
+    line-height: 71px;
+    position: absolute;
+    right: 210px;
+}
+.art_pc{
+    position: absolute;
+    left: 78%;
+    top: 40%;
+    
+}
+
+.art_pc h6{
+    font-size: 22px;
+    font-weight: 530;
+}
+    
+.art_pc p{
+    font-size:15px;
+    /* font-weight: 300; */
+}
+
+
+.art_mobile{
+    position: absolute;
+    left: 4%;
+    top: 40%;
+    display: none;
+    z-index: 1;
+    
+}
+.art_mobile h6{
+    font-size: 24px;
+    font-weight: 530;
+    color: #fff;
+}
+    
+.art_mobile p{
+    font-size:17px;
+    color: #fff;
+    /* font-weight: 300; */
+}
+.art_mobile p:hover{
+    color: #070707;
+}
+.art_mobile h6:hover{
+    color: #000000;
+}
+.art_mobile #trangchu_mobile a:hover {
+    color: #000000;
+} 
+@media (max-width: 1200px){
+    header img {
+        display: none;
+    }
+    .art_pc{
+        display: none;
+    }
+    .image_mobile {
+        display: block;
+    }
+    .image_pc{
+        display: none;
+    }
+    .art_mobile{
+        display: block;
+    }
+    nav .menu{
+        display: none;
+    }
+    nav .brand{
+        display: none;
+    }
+    #brand_mobile h2 a{
+        display: block;
+    }
+    .nav_bar .nav_bar2 svg {
+        display: block;
+    }
+    .nav_bar .nav_bar2 {
+        display:block;
+    }
+    footer{
+        margin-top: 6px
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1430px){
+    .search {
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .contenttt {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .slide {
+        display: none;
+    }
+    #fix_footer{
+        position:relative;
+        left: 50px;
+
+    }
+    #fix_footer_bottum{
+        position:relative;
+        left: 20px;
+        top: 30px;
+        margin-bottom: 50px;
+    }
+}
+    
+
+/*pc*/
+.art_pc .trangchu a{
+    color: #070707;
+    font-weight: 440;
+    text-decoration: none;
+}
+.art_pc .trangchu a:before{
+    content: '';
+    position: absolute;
+    top: 137px;
+    /* left: 19px; */
+    left: 0.1px;
+    width: 52%;
+    height: 1px;
+    background: rgb(92, 89, 89);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+}
+.art_pc .trangchu a:hover:before{
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+
+/*mobile*/
+#trangchu_mobile a{
+    color: #ffffff;
+    font-weight: 440;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+
+.overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    animation: Inoverlay linear 0.3s;
+    z-index: 2;
+}
+
+.nav_mobile{
+    position:fixed;
+    top:10px;
+    left: 2%;
+    width: 96%;
+    bottom: 10px;
+    height: 30%;
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-110%);
+    transition: transform linear 0.2s;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index:3;
+
+}
+.nav_mobile_list{
+    font-size: 16px;
+    display: flex;
+    justify-content:space-evenly;
+    
+
+
+}
+.nav_mobile .nav_mobile_list li a{
+    /* điều chỉnh khoảng cách, màu*/
+    
+    position: relative;
+    height: 80px;
+    line-height: 210px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+   
+}
+.nav_mobile .nav_mobile_list li a:before{
+    /* chỉnh hiệu ứng khi trỏ vào thẻ*/
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
     width: 100%;
-    height:520px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:relative;
-    top:-130px;
+    height: 2%;
+    background: rgb(95, 91, 91);
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
 }
-.name h6{
+.nav_mobile .nav_mobile_list li a:hover:before{
+    /*trước khi trỏ vào hiệu ứng*/
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.nav_mobile .nav_mobile_list li a:hover{
+    /* sau khi trỏ*/
+    color: #363636;
+}
+/* .nav_mobile .content{
+    position: absolute;
+    top:86%;
+    left: 32%;
+    font-size: 13px;
+    color: #868383;
+} */
+.nav_mobile .contenttt {
+    position: fixed;
+    bottom: 10%;
+    font-size: 13px;
+    color: #868383;
+    left: 42%;
+}
+.nav_mobile .delete{
+    width: 15px;
+    /* height: 20px; */
+    color:#000000 ;
+    position: absolute;
+    top: 22px;
+    left: 32px;
+}
+.nav_mobile .brandd_nav_mobile h2 a{
+    position: absolute;
+    top: 10px;
+    left: 44%;
+    color: #000;
+    font-size: 20px;
+
+}
+#nav_mobile_input{
+    
+    position: absolute;
+    top: 30px;
+    left: 60px;
+}
+#nav_mobile_input:checked ~ .overlay{
+    display: block;
+}
+#nav_mobile_input:checked ~ .nav_mobile{
+    transform: translateY(0%);
+}
+@keyframes Inoverlay{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+/* footer */
+
+
+footer{
+    width: 100%;
+    height: auto;
+    padding: 25px 50px;
+    background:#eeeeeea1;
+    /* /* display: flex; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+
+.social-icon li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.social-icon li a .fa{
+    color: rgb(255, 255, 255);
     font-size: 20px;
 }
-.name2 h6{
-    margin-top: 20px;
-    margin-left: -40px;
-    font-size: 17px;
-}
-.nav_stack{
+.social-icon{
     display: flex;
-    justify-content: space-around ;
-    line-height:70px ;
 }
-/* */
-.nav_stack li a {
-    color:#000;
-    text-decoration: none;
-} 
-.logo2{
-    margin-top: -90px;
-    margin-left: 50px;
-}
-.logo {    
-    position:absolute;
-    top: 0;
-}
-
-/* hiệu ứng khi di chuột vào item */
-.effect:before{
-    content: '';
-    position: absolute;
-    top:55px;
-    width: 4.3%;
-    height: 1px;
-    background: rgb(22, 21, 21);
-    transform-origin: right;
-    z-index: -1;
-    transform: scaleX(0);
-    transition:  transform 0.5s;
-}
-.effect:hover:before
-{
-    transform-origin: left;
-    transform: scaleX(1);
-    
-
-}
-.effect:hover{
-    color: #5e5d5d;
-
-}
-.fix_nav:before{
-    content: '';
-    position: absolute;
-    top:55px;
-    width: 4%;
-    height: 1px;
-    background: rgb(22, 21, 21);
-    transform-origin: right;
-    z-index: -1;
-    transform: scaleX(0);
-    transition:  transform 0.5s;
-}
-.fix_nav_2:before{
-    content: '';
-    position: absolute;
-    top:55px;
-    width: 5%;
-    height: 1px;
-    background: rgb(22, 21, 21);
-    transform-origin: right;
-    z-index: -1;
-    transform: scaleX(0);
-    transition:  transform 0.5s;
-}
-.key    {
-    opacity: 0.6;
-    margin-bottom:20px;
-    margin-right: -0px;
-}
-.article1{
-    display:block;
-    text-align: center;
-    margin-top: -60px;
-}
-.image_TT {
-    border-radius:50%;
-    border: 3px solid rgb(156, 163, 13);
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    margin-bottom: 10px;
-
-}
-#fix_art{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-.note_style{
-    height: 20px;
-}
-/* .note_style:before{
-    content: '';
-    position: absolute;
-    bottom: -155px;
-    width: 10%;
-    height: 1px;
-    background: rgb(22, 21, 21);
-    transform-origin: right;
-    z-index: -1;
-    transform: scaleX(0);
-    transition:  transform 0.6s;
-}
-.note_style:hover:before
-{
-    transform-origin: left;
-    transform: scaleX(1);
-    
-}
-*/
-.note_style:hover{
-    color: #5e5d5d;
-
-}
-/*
-.note_style.tab1:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-155px - 90px);
-    width: 9.2%;
-}
-.note_style.tab2:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-155px - 90px);
-    width: 5.5%;
-}
-.note_style.tab3:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-155px - 90px);
-    width: 15.3%;
-}
-.note_style.tab4:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-251px - 90px);
-    width: 10%;
-}
-.note_style.tab5:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-251px - 90px);
-    width: 4.5%;
-}
-.note_style.tab6:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-251px - 90px);
-    width: 11%;
-}
-.note_style.tab7:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-348px - 90px);
-    width: 7.4%;
-}
-.note_style.tab8:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-348px - 90px);
-    width: 4%;
-}
-.note_style.tab9:before{
-    content: '';
-    position: absolute;
-    bottom:  calc(-348px - 90px);
-    width: 10.7%;
-} */
-.image_art{
-    margin-top: 200px;
-    background-color: rgba(0, 0, 0,.9);
-    width: 100%;
-    height: 400px;
-}
-.but_header{
-    position:absolute;
-    left: 128px;
-    padding: 0 60px;
-    font-size: 29px;
-    bottom: 143px;
-    border: #fff;
-    background-color: #fff;
-}
-.img_tiger{
-    background-image: url(https://v.fastcdn.co/u/2d746943/40301116-0-Panther.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 22%;
-    height: 100%;
-    position: absolute;
-    top:1370px;
-    left: 120px;
-}
-.art_h3 {
-    color: rgb(247, 247, 247);
-    font-size: 30px;
-    padding-top: 100px;
-    padding-left: 600px;
-    margin-bottom: 10px;
-
-
-    }
-.art_p {
-    color: rgb(255, 255, 255);
-    padding-left: 600px;
-
-    }
-.button_art{
-    margin-top: 40px;
-    margin-left: 39.5%;
-    padding: 6px 60px;
-    border-radius: 5px;
-    border: 1px solid rgb(255, 255, 255);
-    background-color:  rgb(90, 91, 31); 
-}
-
-.button_art:hover{
-    background-color: rgb(31, 2, 2); ;
-    
-}
-footer{
-    position: relative;
-    margin-top: 150px;
-    background-color: rgba(0, 0, 0,.9);
-    width: 100%;
-    height: 100%;
-    color: aliceblue;
-}
-.icon_footer {
+.footer_content{
+    font-weight: 500;
     margin-bottom: 15px;
-}
-
-@media only screen and (max-width: 680px) {
-    div.ma70{
-        /* display: none; */
-       padding-left: 70px; 
-       margin-top: -20px;
-       /* border-bottom: 1px solid bisque; */
-    }
 
 }
-
-/* <= table */
-@media (max-width: 1023px) {
-    .logo {
-        margin-left: 170px ;
-        margin-top: 10px;
-        width: 70px;
-        height: 70px; 
-
-    }
-    .logo2{
-        margin-left: 180px;
-        z-index: 110;
-        margin-top:-100px;
-        /* position: absolute; */
-    }
-
-
-    .img_tiger{
-        margin-top: 130px;
-    }
-    .art_h3,
-    .art_p,
-    .button_art{
-        margin-right: 50px;
-    }
-    .art_right{
-        margin-right: 300px;
-    }
+.footer_span{
+    margin-bottom: 10px;
 }
-@media (max-width: 680px) {
-    .logo2{
-        margin-left: 120px;
-    
-    }
-    .logo{
-        margin-left: 120px;
-    }
-    div.fade{
-        margin: 0 15px;
-    }
-    #fix_art{
-        display: flex;
-        justify-content: start;
-        text-align: center;
-        margin: 15px 120px;
-    }
-    #fix_art:last-child{
-        margin-left: 115px;
-    
-    }
-
+.footer_right_top{
+    display: flex;
+    margin-bottom: 13px;
 }
-
-
-/* ^^^^ trên đây là phần css của trang index.html  ^^^^*/
+.icon_call{
+    margin-right: 13px;
+}
+.footer_right_bottum{
+    display: flex;
+}
+.icon_gmail{
+    margin-right: 13px;
+}
